@@ -58,7 +58,7 @@
       "          <white>{{name}}</><green> / </><cyan>{{handle}}</>",
       "",
       {
-        "label": "<blue>Work</>",
+        "label": "<white>Work</>",
         "text": "{{work}}"
       },
       "",
@@ -69,7 +69,7 @@
       },
       {
         "label": "npm",
-        "text": "https://www.npmjs.com/<red>~{{npm}}</>",
+        "text": "https://www.npmjs.com/<cyan>~{{npm}}</>",
         "when": "{{npm}}"
       },
       {
@@ -79,12 +79,12 @@
       },
       {
         "label": "LinkedIn",
-        "text": "https://www.linkedin.com/in/<blue>{{linkedin}}</>",
+        "text": "https://www.linkedin.com/in/<cyan>{{linkedin}}</>",
         "when": "{{linkedin}}"
       },
       {
         "label": "Web",
-        "text": "<cyan>{{web}}</>",
+        "text": "<white>{{web}}</>",
         "when": "{{web}}"
       },
       "",
