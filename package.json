@@ -1,0 +1,97 @@
+{
+  "name": "filipvitas",
+  "version": "1.0.0",
+  "description": "Personal npm card for Filip Vitas (@vitasdev)",
+  "main": "dist/card.js",
+  "unpkg": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fvitas/filipvitas.git"
+  },
+  "scripts": {
+    "prepare": "node src/htmlify",
+    "prepublishOnly": "rm -rf dist && webpack"
+  },
+  "bin": {
+    "filipvitas": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "index.html"
+  ],
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "Filip Vitas",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.2.3",
+    "ansi-to-html": "0.6.13",
+    "babel-loader": "8.0.6",
+    "boxen": "2.1.0",
+    "chalk": "2.4.1",
+    "chalker": "1.1.2",
+    "lodash.get": "4.4.2",
+    "webpack": "4.28.1",
+    "webpack-bundle-analyzer": "3.6.0",
+    "webpack-cli": "3.1.2"
+  },
+  "myCard": {
+    "info": {
+      "name": "Filip Vitas",
+      "handle": "@vitasdev",
+      "twitter": "@vitasdev",
+      "npm": "fvitas",
+      "github": "fvitas",
+      "linkedin": "vitasfilip",
+      "web": "https://fvitas.github.io",
+      "work": "Coffee Driven Developer"
+    },
+    "data": [
+      "          <white>{{name}}</><green> / </><cyan>{{handle}}</>",
+      "",
+      {
+        "label": "<blue>Work</>",
+        "text": "{{work}}"
+      },
+      "",
+      {
+        "label": "Twitter",
+        "text": "https://twitter.com/<cyan>{{twitter}}</>",
+        "when": "{{twitter}}"
+      },
+      {
+        "label": "npm",
+        "text": "https://www.npmjs.com/<red>~{{npm}}</>",
+        "when": "{{npm}}"
+      },
+      {
+        "label": "GitHub",
+        "text": "https://github.com/<green>{{github}}</>",
+        "when": "{{github}}"
+      },
+      {
+        "label": "LinkedIn",
+        "text": "https://www.linkedin.com/in/<blue>{{linkedin}}</>",
+        "when": "{{linkedin}}"
+      },
+      {
+        "label": "Web",
+        "text": "<cyan>{{web}}</>",
+        "when": "{{web}}"
+      },
+      "",
+      {
+        "label": "Card",
+        "text": "<red>npx</> {{_packageName}}"
+      }
+    ]
+  }
+}
